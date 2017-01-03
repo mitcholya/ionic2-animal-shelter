@@ -38,14 +38,14 @@ export class PetsPage {
         'short_dest': ['Питомцам'],
         'label': ['$order_id'],
         'quickpay_form': ['donate'],
-        'targets': ['транзакция {order_id}'],
-        'sum': ['', Validators.required],
+        'targets': ['Питомцам'],
+        'sum': ['150', Validators.compose([Validators.required, Validators.minLength(2)]) ],
         'comment': ['Питомцам'],
         'need-fio': [true],
         'need-email': [true],
         'need-phone': [false],
         'need-address': [false],
-        'paymentType': ['']
+        'paymentType': ['', Validators.required]
       }); 
     }
 
