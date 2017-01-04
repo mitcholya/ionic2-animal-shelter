@@ -18,6 +18,14 @@ export interface IComment {
     votesDown: number;
 }
 
+export interface Pet {
+    pid: string;
+    petname: string;
+    petage: number;
+    petdescription: string;
+    petimage: string;
+}
+
 export interface UserCredentials {
     email: string;
     password: string;
