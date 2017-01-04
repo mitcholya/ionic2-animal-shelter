@@ -5,6 +5,7 @@ import {ThreadsPage} from '../threads/threads';
 import {ProfilePage} from '../profile/profile';
 import {AboutPage} from '../about/about';
 import { PetsPage } from '../pets/pets';
+import { PaymentPage } from '../payment/payment';
 import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class TabsPage {
     public profilePage: any;
     public aboutPage: any;
     public petsPage: any;
+    public paymentPage: any;
 
     public newThreads: string = '';
     public selectedTab: number = -1;
@@ -30,6 +32,7 @@ export class TabsPage {
         this.profilePage = ProfilePage;
         this.aboutPage = AboutPage;
         this.petsPage = PetsPage;
+        this.paymentPage = PaymentPage;
     }
 
     // ngOnInit() {

@@ -14,6 +14,7 @@ import { ThreadCommentsPage } from '../pages/thread-comments/thread-comments';
 import { ThreadCreatePage } from '../pages/thread-create/thread-create';
 import { ThreadsPage } from '../pages/threads/threads';
 import { PetsPage } from '../pages/pets/pets';
+import { PaymentPage } from '../pages/payment/payment';
 // Custom components
 import { ThreadComponent } from '../shared/components/thread.component';
 import { UserAvatarComponent } from '../shared/components/user-avatar.component';
@@ -33,6 +34,7 @@ import { APP_PROVIDERS } from '../providers/app.providers';
     ThreadCreatePage,
     ThreadsPage,
     PetsPage,
+    PaymentPage,
     ThreadComponent,
     UserAvatarComponent
   ],
@@ -53,7 +55,8 @@ import { APP_PROVIDERS } from '../providers/app.providers';
     ThreadCommentsPage,
     ThreadCreatePage,
     ThreadsPage,
-    PetsPage
+    PetsPage,
+    PaymentPage
   ],
   providers: [APP_PROVIDERS]
 })
