@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { IThread, IComment } from '../interfaces';
+import { IThread, IComment, Pet } from '../interfaces';
 import { ItemsService } from '../services/items.service';
 
 @Injectable()
@@ -92,5 +92,26 @@ export class MappingsService {
 
         return comment;
     }
+
+    getPets(snapshot: any): Array<Pet> {
+        let pets: Array<Pet> = [];
+        if (snapshot.val() == null)
+            return pets;
+
+        let list = snapshot.val();
+
+        Object.keys(snapshot.val()).map((key: any) => {
+            let pet: any = list[key];
+            pets.push({
+                pid: key,
+                petname: pet.petname,
+                petage: pet.petage,
+                petdescription: pet.description
+            });
+        });
+
+        return pets;
+    }
+
 
 }

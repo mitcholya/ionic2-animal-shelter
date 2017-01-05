@@ -23,7 +23,7 @@ export interface Pet {
     petname: string;
     petage: number;
     petdescription: string;
-    petimage: string;
+    //petimage: string;
 }
 
 export interface UserCredentials {

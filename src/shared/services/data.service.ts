@@ -14,6 +14,7 @@ export class DataService {
     statisticsRef: any = firebase.database().ref('statistics');
     storageRef: any = firebase.storage().ref();
     connectionRef: any = firebase.database().ref('.info/connected');
+    petsRef: any = firebase.database().ref('pets');
 
     defaultImageUrl: string;
     connected: boolean = false;
@@ -132,6 +133,22 @@ export class DataService {
 
     getStorageRef() {
         return this.storageRef;
+    }
+
+    getPetsRef() {
+        return this.petsRef;
+    }
+
+    addPets(pet) {
+        return this.petsRef.set(pet);
+    }
+
+    addDogs(dog) {
+        return this.petsRef.child('/dogs').push().set(dog);
+    }
+
+    getDogs() {
+        return this.petsRef.child('/dogs');
     }
 
     getThreadCommentsRef(threadKey: string) {
